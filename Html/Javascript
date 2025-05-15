@@ -1,0 +1,26 @@
+const components = document.querySelectorAll(".component");
+let selected = null;
+let offsetX, offsetY;
+
+components.forEach(component => {
+    component.addEventListener("dragstart", e => {
+        selected = component;
+        offsetX = e.offsetX;
+        offsetY = e.offsetY;
+    });
+});
+
+document.getElementById("container").addEventListener("dragover", e => {
+    e.preventDefault();
+});
+
+document.getElementById("container").addEventListener("drop", e => {
+    e.preventDefault();
+    if (selected) {
+        const container = document.getElementById("container");
+        const rect = container.getBoundingClientRect();
+        selected.style.left = (e.clientX - rect.left - offsetX) + "px";
+        selected.style.top = (e.clientY - rect.top - offsetY) + "px";
+        document.getElementById("status").textContent = `${selected.alt} posicionado.`;
+    }
+});
