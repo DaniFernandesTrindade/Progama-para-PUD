@@ -25,10 +25,16 @@ Este é um jogo desenvolvido com **HTML**, **CSS** e **JavaScript**, onde o usu�
 - CSS3
 - JavaScript (Vanilla)
 
+## Contato
+
+[![LinkedIn - Daniella Trindade](https://img.shields.io/badge/LinkedIn-Daniella_Trindade-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/daniella-trindade-2b31ba357)
+
+
 ## Como executar o projeto
 
 1. Faça o download ou clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/monte-seu-pc.git
+## Contato
 
 
