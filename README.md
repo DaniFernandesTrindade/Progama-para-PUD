@@ -31,5 +31,4 @@ Este √© um jogo desenvolvido com **HTML**, **CSS** e **JavaScript**, onde o usu√
 ```bash
 git clone https://github.com/seu-usuario/monte-seu-pc.git
 
-<a href="https://www.linkedin.com/in/daniella-trindade-2b31ba357" class="linkedIn-btn" target="_blank">Visite meu LinkedIn</a>
 
