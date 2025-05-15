@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Montagem e Manutenção - Verificação de PC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>Jogo de Montagem e Manutenção do PC</h1>
+        
+        <div id="game-area">
+            <div id="cpu" class="component">CPU</div>
+            <div id="motherboard" class="component">Motherboard</div>
+            <div id="ram" class="component">RAM</div>
+            <div id="gpu" class="component">GPU</div>
+            <div id="storage" class="component">Storage</div>
+        </div>
+
+        <button id="check-btn">Verificar Montagem</button>
+        <p id="status">Status: Pronto para iniciar a montagem!</p>
+    </div>
+
+    <script>
+        const checkBtn = document.getElementById("check-btn");
+        const status = document.getElementById("status");
+        const components = document.querySelectorAll(".component");
+
+        let selectedComponents = [];
+
+        // Função para selecionar as peças
+        components.forEach(component => {
+            component.addEventListener("click", () => {
+                if (!selectedComponents.includes(component.id)) {
+                    component.style.backgroundColor = "#33b5e5";
+                    selectedComponents.push(component.id);
+                } else {
+                    component.style.backgroundColor = "";
+                    selectedComponents = selectedComponents.filter(id => id !== component.id);
+                }
+            });
+        });
+
+        // Função para verificar a montagem
+        checkBtn.addEventListener("click", () => {
+            if (selectedComponents.length === 5) {
+                status.textContent = "Status: Montagem Completa - PC Vai Funcionar!";
+                status.style.color = "green";
+            } else {
+                status.textContent = "Status: Montagem Incompleta - Verifique as Peças!";
+                status.style.color = "red";
+            }
+        });
+    </script>
+
+</body>
+</html>
+
