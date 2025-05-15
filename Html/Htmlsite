@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Montagem - Placa-Mãe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Monte sua Placa-Mãe</h1>
+
+    <div id="container">
+        <img id="motherboard" src="placa-mae.png" alt="Placa-Mãe">
+        
+        <img src="cpu.png" id="cpu" class="component" draggable="true" alt="CPU">
+        <img src="ram.png" id="ram" class="component" draggable="true" alt="RAM">
+        <img src="gpu.png" id="gpu" class="component" draggable="true" alt="GPU">
+        <img src="ssd.png" id="ssd" class="component" draggable="true" alt="SSD">
+    </div>
+
+    <p id="status">Arraste os componentes até a placa-mãe.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
