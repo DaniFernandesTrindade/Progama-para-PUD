@@ -1,0 +1,81 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Estilos para o fundo do jogo */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+}
+
+#game-area {
+    width: 80%;
+    height: 300px;
+    border: 2px solid #ffffff;
+    position: relative;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilos das peças do PC */
+.component {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.component:hover {
+    background-color: #ff5733;
+}
+
+/* Estilos do botão de verificação */
+button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #33b5e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #29a3c2;
+}
+
+/* Status */
+#status {
+    font-size: 1.2em;
+    color: #ffffff;
+}
